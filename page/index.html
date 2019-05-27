@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Atento</title>
+
+  <link rel="stylesheet" type="text/css" href="fonts/lato/style.css">
+
+  <link rel="stylesheet" type="text/css" href="libs/bootstrap-4/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+  <header class="att-header">
+    <div class="container att-container-sm">
+      <h1 class="sr-only">Atento</h1>
+      <img src="images/logo.png" width="" height="30" alt="Atento">
+    </div>
+  </header>
+
+  <main class="py-5">    
+    <div class="container att-container-sm">
+    <form id="form-data">
+      <ul class="nav nav-tabs mb-3" id="items" role="tablist">
+        <li class="nav-item">          
+          <a class="nav-link active" id="wifi-tab" data-toggle="tab" href="#wifi" role="tab">
+            <div class="d-flex align-items-center flex-column">
+              <img class="mb-2" src="images/wifi.png" height="32">
+              Acesso Wi-Fi Convidado
+            </div>
+          </a>
+        </li>
+        <li class="nav-item">          
+          <a class="nav-link" id="tv-tab" data-toggle="tab" href="#tv" role="tab">
+            <div class="d-flex align-items-center flex-column">
+              <img class="mb-2" src="images/tv.png" height="32">
+              TV 42' com Instalação
+            </div>
+          </a>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="wifi" role="tabpanel">
+          <div class="card">
+            <div class="card-header bg-white">
+              Usuário e senha de rede wireless da Atento para convidados, clientes e fornecedores<br>
+              <b>SLA de atendimento:</b> 4 hrs úteis
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <label for="solicitante">Solicitante</label>
+                  <select class="custom-select" id="solicitante-wifi">
+                    <option selected>Selecione</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="nomeConvidado">Nome do convidado <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="nomeConvidado" required>
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <label for="dataInicioAcesso">Data do início do acesso <span class="text-danger">*</span></label>
+                    <input type="date" class="form-control" id="dataInicioAcesso" required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="empresa">Empresa <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="empresa" required>
+                    <small class="form-text text-muted">Utilizar somente texto. Se for necessário caracteres especiais, utilizar somente (.) ou (_)</small>
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <label for="periodoUtilizacao">Período de Utilização<span class="text-danger">*</span></label>
+                    <select class="custom-select" id="periodoUtilizacao" required>
+                      <option value="1" selected>1 dia</option>
+                      <option value="2" >2 dias</option>
+                      <option value="3" >3 dias</option>
+                      <option value="4" >4 dias</option>
+                      <option value="5" >5 dias</option>
+                    </select>
+                    <small class="form-text text-muted">Informar o total de dias que o Wi-Fi será utilizado, se houver liberação para dias anteriores será cancelada.</small>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="emailConvidado">E-mail do Convidado <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="emailConvidado" required>
+                    <small class="form-text text-muted">O e-mail de convidado não poderá estar atrelado a um domínio Atento e nem associado a um provedor genérico, como: (Gmail, Outlook, Uol, Hotmail, entre outros)</small>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+            <div class="card-footer bg-white">
+              <button id="submit" type="button" class="btn btn-primary">Enviar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="tv" role="tabpanel">
+          <div class="card">
+            <div class="card-header bg-white">
+              <dl class="row mb-0">
+                <dt class="col-md-4">Tipo de Tela</dt>
+                <dd class="col-md-8">Plana / Led ou LCD</dd>
+                <dt class="col-md-4">Conversor Digital</dt>
+                <dd class="col-md-8">Sim</dd>
+                <dt class="col-md-4">Tipo Conexão</dt>
+                <dd class="col-md-8">VGA ou HDMI</dd>
+                <dt class="col-md-4">Dimensões (aproximadas)</dt>
+                <dd class="col-md-8">980 x 590 mm</dd>
+                <dt class="col-md-4">Marcas</dt>
+                <dd class="col-md-8">LG, Sony, Samsung ou similar</dd>
+              </dl>
+
+              <hr>
+
+              <div class="text-muted mb-2">Será cobrada 1 taxa de Mobilização para até 3 produtos adquiridos, conforme abaixo:</div>
+              <div class="mb-2">
+                <b>Taxa de Mobilização para SP / RS / RJ / MG: </b>R$ 377, 22<br>
+                <b>Taxa de Mobilização para BA / GO:</b> R$ 486,99
+              </div>
+              <div>
+                <b>SLA de Atendimento para as regiões (SP / RS / RJ / MG): </b>15 dias úteis<br>
+                <b>SLA de Atendimento para regiões (BA/GO): </b>18 dias úteis
+              </div>
+            </div>
+            <div class="card-body">
+              <form id="form-data-2">
+                <div class="form-group">
+                  <label for="usuarioSolicitante">Usuário Solicitante</label>
+                  <select class="custom-select" id="usuarioSolicitante">
+                    <option selected>Selecione</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="produto">Produto</label>
+                  <select class="custom-select" id="produto">
+                    <option selected>Selecione</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="site">Site <span class="text-danger">*</span></label>
+                    <select class="custom-select" id="site" required>
+                      <option selected>Selecione</option>
+                      <option value="Unidade SP">Unidade SP</option>
+                      <option value="Unidade RS">Unidade RS</option>
+                      <option value="Unidade RJ">Unidade RJ</option>
+                      <option value="Unidade MG">Unidade MG</option>
+                      <option value="Unidade BA">Unidade BA</option>
+                      <option value="Unidade GO">Unidade GO</option>
+                    </select>
+                    <small class="form-text text-muted">Local da entrega</small>
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <label for="quantidadeTvs">Quantidade de TV's <span class="text-danger">*</span></label>
+                    <select class="custom-select" id="quantidadeTvs" required>
+                      <option selected>Selecione</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="voltagem">Voltagem <span class="text-danger">*</span></label>
+                    <select class="custom-select" id="voltagem" required>
+                      <option selected>Selecione</option>
+                      <option value="110">110</option>
+                      <option value="220">220</option>
+                    </select>
+                  </div>
+                </div>
+
+                <hr/>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="ratear">Desejo incluir instalação: <span class="text-danger">*</span></label>
+                    <div class="clearfix"></div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="instalar1" name="instalar" class="custom-control-input" value="sim">
+                      <label class="custom-control-label" for="instalar1">Sim</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="isntalar2" name="instalar" class="custom-control-input" value="name">
+                      <label class="custom-control-label" for="isntalar2">Não</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row" id="periodo-instalacao-group">
+                  <div class="form-group col-md-6">
+                    <label for="periodoInstalacao">Período de instalação <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="periodoInstalacao" required>
+                    <small class="form-text text-muted">O solicitante deverá informar o melhor dia para realizar a instalação da Televisão (Ex.: Segunda-Feira, Sábado, Domingo).</small>
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <label for="horarioInicio">Horário Janela (Início e Fim) <span class="text-danger">*</span></label>
+                    <div class="row">
+                      <div class="col-6">
+                        <input type="text" class="form-control" id="horarioInicio" placeholder="Início" required>
+                      </div>
+                      <div class="col-6">
+                        <input type="text" class="form-control" id="horarioFim" placeholder="Fim" required>
+                      </div>
+                    </div>
+                    <small class="form-text text-muted">O solicitante deverá informar o horário preferencial para realizar a instalação da televisão (Ex.: 8:00 às 13:00)</small>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="ratear">Desejo ratear essa solicitação em: <span class="text-danger">*</span></label>
+                    <div class="clearfix"></div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="ratearCentroCusto" name="ratear" class="custom-control-input" value="centrocusto">
+                      <label class="custom-control-label" for="ratearCentroCusto">Centro de Custo</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="ratearContrato" name="ratear" class="custom-control-input" value="contrato">
+                      <label class="custom-control-label" for="ratearContrato">Contrato</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group col-md-6" id="contrato-group">
+                    <label for="contrato">Contrato <span class="text-danger">*</span></label>
+                    <select class="custom-select" id="contrato" required>
+                      <option selected>Selecione</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6" id="centrocusto-group">
+                    <label for="centrocusto">Centro de Custo <span class="text-danger">*</span></label>
+                    <select class="custom-select" id="centrocusto" required>
+                      <option selected>Selecione</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="card-footer bg-white">
+              <!-- <div class="h4 mb-3">
+                <small>Preço: </small> R$ 3.534,34
+              </div> -->
+              <button id="submit-tv" type="button" class="btn btn-primary">Enviar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    </div>
+  </main>
+
+  <footer class="att-footer">
+    <div class="text-center">
+      <small class="text-muted">Powered by: </small>
+      <img src="images/logo-light-sydle.png">
+    </div>
+  </footer>
+
+  <script src="libs/jquery-3.3.1.min.js"></script>
+  <script src="libs/popper.min.js"></script>
+  <script src="libs/bootstrap-4/js/bootstrap.min.js"></script>
+  <script src="libs/jquery.validate.min.js"></script>
+  <script src="libs/sweetalert.min.js"></script>
+
+  <script src="scripts/submit-wifi.js"></script>
+  <script src="scripts/load-solicitantes.js"></script>
+  <script src="scripts/set-current-date.js"></script>
+
+  <script src="scripts/submit-tv.js"></script>
+  <script src="scripts/load-usuarios.js"></script>
+  <script src="scripts/load-centrosdecusto.js"></script>
+  <script src="scripts/load-contratos.js"></script>
+  <script src="scripts/load-produtos.js"></script>
+  <script src="scripts/load-instalacao.js"></script>
+</body>
+</html>

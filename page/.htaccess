@@ -1,0 +1,4 @@
+RewriteEngine On 
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+RewriteRule ^sitemap-jobs\.xml$ sitemap-jobs.php [L]
+RewriteRule ^jooble\.xml$ jooble.php [L]
