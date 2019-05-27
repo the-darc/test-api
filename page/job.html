@@ -896,34 +896,6 @@
   }
     </script>
     <script id="dynamicJSONLD" type="application/ld+json"></script>
-    <script>
-      // window.onload = function() {
-      document.addEventListener('DOMContentLoaded', function() {
-        var data = JSON.stringify({
-          "selectiveProcess": "5bfc3e6d62edb916bb64c922"
-        });
-
-        var xhr = new XMLHttpRequest();
-        // xhr.withCredentials = true;
-
-        xhr.addEventListener("readystatechange", function () {
-          if (this.readyState === 4) {
-            console.log(this.responseText);
-            document.getElementById("job-description").innerHTML = JSON.parse(this.responseText).jsonld.description;
-            document.getElementById("dynamicJSONLD").innerHTML = JSON.stringify(JSON.parse(this.responseText).jsonld, null, 4);
-            document.title = "Vaga: " + JSON.parse(this.responseText).jsonld.title;
-          } else {
-            console.log('this.readyState: ' + this.readyState);
-          }
-        });
-
-        xhr.open("POST", "https://sydle.sydle.one/api/1/jobportal/com.sydle.hr_recruiter/serviceFacade/selectiveProcess.jsonld");
-        xhr.setRequestHeader("Content-Type", "application/json");
-        xhr.setRequestHeader("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjb2RlIjoiNWFhYWRiNTQ2MmVkYjk3ZThjYTYxZGNjIiwibG9naW4iOiJzaXRlc3lkbGUiLCJuYW1lIjoiU2l0ZSBkYSBTWURMRSIsImxvY2FsZSI6InB0X0JSIiwiX29yZ0lkIjoiNWFhOTllOWU2MmVkYjk3ZThjYTQ0ODg4IiwiX2NsYXNzIjp7Il9pZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDA3MCIsIl9jbGFzc0lkIjoiMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2xhc3NQYWNrYWdlSWRlbnRpZmllciI6Il9zeXN0ZW0iLCJjbGFzc0lkZW50aWZpZXIiOiJfYWNsVXNlciJ9LCJfY3JlYXRpb25EYXRlIjoiMjAxOC0wMy0xNVQyMDo0NTowOC4xMzNaIiwiX2xhc3RVcGRhdGVEYXRlIjoiMjAxOC0wMy0xNVQyMDo0NTowOC4xMzNaIiwiX2xhc3RVcGRhdGVVc2VyIjp7Il9pZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwOSIsIl9jbGFzc0lkIjoiMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAyIiwiY2xhc3NQYWNrYWdlSWRlbnRpZmllciI6Il9zeXN0ZW0iLCJjbGFzc0lkZW50aWZpZXIiOiJfdXNlciJ9LCJfY2xhc3NSZXZpc2lvbiI6IjVhOWVkN2I2ZWM4MzJhOWFjODVlZDE4OCIsIl9yZXZpc2lvbiI6Ii0xNjkxMDA0OTkzIiwiYWN0aXZlIjp0cnVlLCJvcmdhbml6YXRpb25JZCI6InN5ZGxlIiwiYXV0aGVudGljYXRpb25DbGFzcyI6Il9zeXN0ZW0uX3VzZXIiLCJpYXQiOjE1MjExNDY3MzMsImlzcyI6Imp3Iiwic3ViIjoiYWNjZXNzVG9rZW4ifQ.NqzgcLr0hMzdnIc3mBtlmQJ_-vj2rSDIlkhKtfqcfdWVVhSZAuoGFFro_OmK_KnlB2QJSUEVSqBCjeG92_oFtg");
-        xhr.send(data);
-      }, false);
-      // };
-    </script> 
   <title>Sem Titulo</title>
   <meta name="description" content="20 vagas para Engenheiro(a) de Software em Belo Horizonte - MG">
   <meta property="og:description" content="20 vagas para Engenheiro(a) de Software em Belo Horizonte - MG">
@@ -1009,5 +981,33 @@
         </div>
         <script src="https://px.ads.linkedin.com/collect/?time=1558976743435&amp;pid=1130681&amp;url=https%3A%2F%2Fwww.sydle.com%2Fbr%2Fcarreiras%2Fvaga-engenheiro-de-software-belo-horizonte-mg-5bfc3e6d62edb916bb64c922%2F&amp;fmt=js&amp;s=1" type="text/javascript"></script>
         <script src="https://px.ads.linkedin.com/collect/?time=1558979398836&amp;pid=1130681&amp;url=http%3A%2F%2Flocalhost%2Fjob.php&amp;fmt=js&amp;s=1" type="text/javascript"></script>
+        <script>
+            // window.onload = function() {
+            document.addEventListener('DOMContentLoaded', function() {
+                var data = JSON.stringify({
+                "selectiveProcess": "5bfc3e6d62edb916bb64c922"
+                });
+        
+                var xhr = new XMLHttpRequest();
+                // xhr.withCredentials = true;
+        
+                xhr.addEventListener("readystatechange", function () {
+                if (this.readyState === 4) {
+                    console.log(this.responseText);
+                    document.getElementById("job-description").innerHTML = JSON.parse(this.responseText).jsonld.description;
+                    document.getElementById("dynamicJSONLD").innerHTML = JSON.stringify(JSON.parse(this.responseText).jsonld, null, 4);
+                    document.title = "Vaga: " + JSON.parse(this.responseText).jsonld.title;
+                } else {
+                    console.log('this.readyState: ' + this.readyState);
+                }
+                });
+        
+                xhr.open("POST", "https://sydle.sydle.one/api/1/jobportal/com.sydle.hr_recruiter/serviceFacade/selectiveProcess.jsonld");
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.setRequestHeader("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjb2RlIjoiNWFhYWRiNTQ2MmVkYjk3ZThjYTYxZGNjIiwibG9naW4iOiJzaXRlc3lkbGUiLCJuYW1lIjoiU2l0ZSBkYSBTWURMRSIsImxvY2FsZSI6InB0X0JSIiwiX29yZ0lkIjoiNWFhOTllOWU2MmVkYjk3ZThjYTQ0ODg4IiwiX2NsYXNzIjp7Il9pZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDA3MCIsIl9jbGFzc0lkIjoiMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiY2xhc3NQYWNrYWdlSWRlbnRpZmllciI6Il9zeXN0ZW0iLCJjbGFzc0lkZW50aWZpZXIiOiJfYWNsVXNlciJ9LCJfY3JlYXRpb25EYXRlIjoiMjAxOC0wMy0xNVQyMDo0NTowOC4xMzNaIiwiX2xhc3RVcGRhdGVEYXRlIjoiMjAxOC0wMy0xNVQyMDo0NTowOC4xMzNaIiwiX2xhc3RVcGRhdGVVc2VyIjp7Il9pZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwOSIsIl9jbGFzc0lkIjoiMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAyIiwiY2xhc3NQYWNrYWdlSWRlbnRpZmllciI6Il9zeXN0ZW0iLCJjbGFzc0lkZW50aWZpZXIiOiJfdXNlciJ9LCJfY2xhc3NSZXZpc2lvbiI6IjVhOWVkN2I2ZWM4MzJhOWFjODVlZDE4OCIsIl9yZXZpc2lvbiI6Ii0xNjkxMDA0OTkzIiwiYWN0aXZlIjp0cnVlLCJvcmdhbml6YXRpb25JZCI6InN5ZGxlIiwiYXV0aGVudGljYXRpb25DbGFzcyI6Il9zeXN0ZW0uX3VzZXIiLCJpYXQiOjE1MjExNDY3MzMsImlzcyI6Imp3Iiwic3ViIjoiYWNjZXNzVG9rZW4ifQ.NqzgcLr0hMzdnIc3mBtlmQJ_-vj2rSDIlkhKtfqcfdWVVhSZAuoGFFro_OmK_KnlB2QJSUEVSqBCjeG92_oFtg");
+                xhr.send(data);
+            }, false);
+            // };
+        </script>
         </body>
 </html>
